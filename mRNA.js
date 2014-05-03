@@ -69,7 +69,7 @@ function translate (mrna) {
 	var MRNA = mrna.toUpperCase();
 	var codons  = MRNA.split(" ");
 	var proteins;
-	for (var i = 0; i < codons {
+	for (var i = 0; i < codons) {
 		if(!acids[bases[i]]) {
 			protien += "ERROR";
 		}
