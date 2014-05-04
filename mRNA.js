@@ -65,17 +65,23 @@ var acids = {
 	gga: "Glycine",
 	ggg: "Glycine"
 };
-function translate (mrna) {
-	var MRNA = mrna.toUpperCase();
-	var codons  = MRNA.split(" ");
+function translate (MRNA) {
+	var mrna = MRNA.toLowerCase();
+	console.log(mrna);
+	var codons  = mrna.split(" ");
+	console.log(codons);
 	var proteins;
-	for (var i = 0; i < codons) {
-		if(!acids[bases[i]]) {
-			protien += "ERROR";
+	for (var i = 0; i < codons; i++) {
+		var set = codons[i];
+		console.log(set);
+		if(!acids[set]) {
+			proteins =" ERROR";
+			console.log("error" + set); 
 		}
 		else {
-			protiens += acids[bases[i]];
+			proteins = " " + acids[set];
+			console.log(acids[set]);
 		}
 	}
-	return protiens;
+	return proteins;
 }

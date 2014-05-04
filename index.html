@@ -1,16 +1,21 @@
 <!doctype html>
+<meta charset="utf-8" />
 <html>
 	<head>
 		<script src="mRNA.js"></script>
 		<script>
 			function trans_form (string, id) {
-				var protien = translate(string);
+				document.getElementById(id).innerHTML = translate(string);
 			}
 		</script>
 		<title>TEST PAGE</title>
 	</head>
 	<body>
-		<form name="form" action="javascript:trans_form(document.form.mrna.value,output)">
+		<form name="form" action="javascript:trans_form(document.form.mrna.value,'output')">
 			<input type="text" name="mrna" />
-		</form>`
+			<input type="submit" />
+		</form>
+		<div id="output"></div>
+	</body>
+</html>
 
